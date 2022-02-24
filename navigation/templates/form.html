@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% set active_page = "profile" %}
+
+{% block title %} {{title}} {% endblock %}}
+
+{% block content %}
+<br>
+<div class="container">
+    <h1>Create and add your profile here</h1>
+</div>
+<form action="{{url_for('navigation.form')}}" method="post">
+    </div>
+    <div class="form-group">
+        <label for="f_name">First Name</label>
+        <input class="form-control" id="f_name" name="f_name" placeholder="First name" type="text">
+    </div>
+    <div class="form-group">
+        <label for="l_name">Last Name</label>
+        <input class="form-control" id="l_name" name="l_name" placeholder="Last name" type="text">
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" name="email" placeholder="Email" type="email">
+    </div>
+    <div class="form-group">
+        <label for="address1">Address</label>
+        <input class="form-control" id="address1" name="address1" placeholder="1234 Main St" type="text">
+    </div>
+    <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input class="form-control" id="address2" name="address2" placeholder="Apartment, studio, or floor" type="text">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input class="form-control" id="city" name="city" type="text">
+            <div class="form-group">
+            </div>
+            <br>
+            <button class="btn btn-secondary" type="submit">Update</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

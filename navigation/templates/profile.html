@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% set active_page = "" %}
+
+{% block title %} {{title}} {% endblock %}}
+
+{% block content %}
+
+<br>
+<div class="container">
+    <h1>Thank you</h1>
+    <smal>Please confirm your information</smal>
+    <br/> <br/>
+    <smal>Full name: {{ profile.first_name }} {{ profile.last_name }}</smal>
+    <br/>
+    <smal>Email: {{ profile.email }}</smal>
+    <br/>
+    <smal>Address: {{ profile.inputAddress }} {{ profile.inputAddress2 }} {{ profile.inputCity }}</smal>
+    <br>
+</div>
+<a href="{{url_for('navigation.form')}}">Update Profile</a>
+{% for order in orders %}
+<h3>Order number: {{order.product_id}}</h3>
+<h3>Qty: {{order.qty}}</h3>
+<h3>{{order.price}}</h3>
+<h3>{{order.Type}}</h3>
+{% endfor %}
+{% endblock %}

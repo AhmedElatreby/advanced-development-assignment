@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% set active_page = "login" %}
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <form action="{{url_for('login.login_page')}}" method="post">
+                <div class="input-field">
+                    <input _ngcontent-c0="" class="form-control form-control-lg" name="user_email"
+                           placeholder="User email" type="text">
+                </div>
+                <div class="input-field">
+                    <input class="form-control form-control-lg" name="user_pwd" placeholder="Password" type="password">
+                </div>
+                <div class="input-field">
+                    <button class="btn btn-info btn-lg btn-block">Sign In</button>
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-primary btn-sm" href="/reset_password">Reset password</a>
+                    <a class="btn btn-secondary btn-sm" href="/register">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
